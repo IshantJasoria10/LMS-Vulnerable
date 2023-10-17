@@ -1,0 +1,40 @@
+<title>Library Management System</title>
+{% extends 'base.html' %}
+
+<body>
+{% block content %}
+<h1>Library Management System</h1>
+<div id="message">
+    <form>
+        Search Book:
+        <input type="text" placeholder="Book Name" name="search" value="{{search|safe}}">
+        <input type="submit" value="Go">
+    </form>
+    {% if BookObj %}
+    <!-- <div> {{ BookObj.book_title }} Book Present</div> -->
+    <div> Book Present</div>
+    {% else %}
+    <div> Book Not Present</div>
+    {% endif %}
+
+</div>
+
+<!-- admin cred: admin - Qwertyuiop1  -->
+
+{%load static%}
+<img src="{%static 'images/Quotes/Quote-5.png' %}">
+<!-- <input type="text" value="{{choosen_img}}"> -->
+
+
+<style>
+    img{
+        height:70%;
+        width:auto;
+        margin: 2%;
+        border-radius:3em;
+    }
+</style>
+
+{% endblock %}
+</body>
+</html>
